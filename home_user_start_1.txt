@@ -1,0 +1,36 @@
+localhost:~# mkdir -p /home/user/start
+localhost:~# touch /home/user/start/1.txt
+localhost:~# echo "Start" > /home/user/start/1.txt
+localhost:~# date >> /home/user/start/1.txt
+localhost:~# mkdir -p /opt/task
+localhost:~# cp /home/user/start/1.txt /opt/task/start.txt
+localhost:~# ls -la / | tail -n 4 >> /opt/task/start.txt
+localhost:~# ls -l /home/user/start/
+total 4
+-rw-r--r--    1 root     root            35 Apr 28 20:38 1.txt
+localhost:~# cat /home/user/start/1.txt
+Start
+Fri Apr 28 20:38:20 UTC 2023
+localhost:~# ls -l /opt/task/
+total 4
+-rw-r--r--    1 root     root           279 Apr 28 20:39 start.txt
+localhost:~# cat /opt/task/start.txt
+Start
+Fri Apr 28 20:38:20 UTC 2023
+dr-xr-xr-x   12 root     root             0 Apr 28 20:37 sys
+drwxrwxrwt    2 root     root            37 Jan  9  2021 tmp
+drwxr-xr-x   10 root     root           229 Jun 24  2020 usr
+drwxr-xr-x   16 root     root           348 Aug 27  2020 var
+localhost:~# history
+   0 mkdir -p /home/user/start
+   1 touch /home/user/start/1.txt
+   2 echo "Start" > /home/user/start/1.txt
+   3 date >> /home/user/start/1.txt
+   4 mkdir -p /opt/task
+   5 cp /home/user/start/1.txt /opt/task/start.txt
+   6 ls -la / | tail -n 4 >> /opt/task/start.txt
+   7 ls -l /home/user/start/
+   8 cat /home/user/start/1.txt
+   9 ls -l /opt/task/
+  10 cat /opt/task/start.txt
+  11 history
